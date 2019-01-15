@@ -35,4 +35,14 @@ We are going to look at basic concepts of Drools:
  - create a file that has .drl extension
  #### ksession
  - create a folder named `META-INF`
+ - create a file named `kmodule.xml`
+ - copy and paste the following code
+ ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+   <kbase name="rules" packages="com.rule">
+        <ksession name="rulesSession"/>
+    </kbase>
+</kmodule>
+```
  
