@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: ruleengine
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: zeromsi
+Implementation-Vendor-Id: com.ngfs
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/ruleengine
+Created-By: Maven Integration for Eclipse
+
