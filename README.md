@@ -65,10 +65,16 @@ We are going to look at basic concepts of Drools:
 		return product;
 	}
 ```
-`Note:` while instantiating kieSession we've passed kieSession name as `rulesSession` which was created inside `kmodule.xml` file and we've passed `ProductService` as `ProductService` through the session to use this isnside .drl file.
+`Note:` while instantiating kieSession we've passed kieSession name as `rulesSession` which was created inside `kmodule.xml` file previously and we've passed `ProductService` as `ProductService` through the session to use this isnside .drl file.
 #### .drl file
 - a .drl file has three major parts
 	1. package declaration
+	`package com.rule`
 	2. file/class importing
+	```xml
+	import com.msi.model.Product
+	import com.msi.service.ProductService
+	import com.msi.model.Customer
+	```
 	3. variable declaration
 	4. rules
