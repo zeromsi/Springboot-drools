@@ -45,4 +45,13 @@ We are going to look at basic concepts of Drools:
     </kbase>
 </kmodule>
 ```
+#### kieContainer bean
+- Create a bean inside main class like following
+```xml
+	@Bean
+	public KieContainer kieContainer() {
+		return KieServices.Factory.get().getKieClasspathContainer();
+	}
+```
+
  
