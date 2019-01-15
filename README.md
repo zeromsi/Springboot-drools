@@ -53,5 +53,17 @@ We are going to look at basic concepts of Drools:
 		return KieServices.Factory.get().getKieClasspathContainer();
 	}
 ```
-
+#### trigger rules
+- write service layer in the following format
+```xml
+	public Product getProductDiscount(Product product, Customer customer) {
+		KieSession kieSession = kieContainer.newKieSession("rulesSession");
+		kieSession.insert(product);
+		kieSession.setGlobal("ProductService", this);
+		kieSession.fireAllRules();
+		kieSession.dispose();
+		return product;
+	}
+```
+`Note:` while instantiating kieSession we've passed kieSession name as `rulesSession` which was created inside `kmodule.xml` file
  
