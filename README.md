@@ -69,7 +69,9 @@ We are going to look at basic concepts of Drools:
 #### .drl file
 - a .drl file has three major parts
 	1. package declaration
-	`package com.rule`
+	```xml
+	package com.rule
+	```
 	2. file/class importing
 	```xml
 	import com.msi.model.Product
@@ -77,4 +79,35 @@ We are going to look at basic concepts of Drools:
 	import com.msi.model.Customer
 	```
 	3. variable declaration
+	```xml
+	global 	ProductService ProductService
+	```
+	`Note:` We've passed ProductService as `ProductService` 
 	4. rules
+	```xml
+rule "Offer for Diamond"
+	when 
+		productObject: Product(type=="diamond")
+	then
+		productObject.setDiscount(15);
+	end
+	
+rule "Offer for Gold"
+	when 
+		productObject: Product(type=="gold")
+	then
+		productObject.setDiscount(25);
+	end
+	
+rule "Offer for Gold"
+	when 
+		productObject: Product(type=="gold")
+		customerObj: Customer()
+	then
+	  if(customerObj.getAge()>21){
+	  ProductService.printMsg();
+	  }
+		productObject.setDiscount(27);		
+	end
+	
+	```
