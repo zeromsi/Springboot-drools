@@ -69,12 +69,12 @@
 		  <dependency>
     <groupId>com.yahoo.elide</groupId>
     <artifactId>elide-core</artifactId>
-    <version>4.2.8</version>
+    <version>4.5.14</version>
           </dependency>
            <dependency>
     <groupId>com.yahoo.elide</groupId>
     <artifactId>elide-datastore-hibernate5</artifactId>
-    <version>4.2.8</version>
+    <version>4.5.14</version>
 </dependency>
 			
 		<dependency>
