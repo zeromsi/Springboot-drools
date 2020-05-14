@@ -83,8 +83,10 @@ We are going to look at basic concepts of Drools:
 	global 	ProductService ProductService
 	```
 	`Note:` We've passed ProductService as `ProductService` 
+	
 	4. rules
 	
+```xml
 rule "Offer for Diamond"
 	when 
 		productObject: Product(type=="diamond")
@@ -109,5 +111,5 @@ rule "Offer for Gold"
 	  }
 		productObject.setDiscount(27);		
 	end
-	
+```
 	
